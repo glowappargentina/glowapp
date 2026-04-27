@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>GlowApp Reset Real — Guía para volver a vos</title>
+<meta name="description" content="Una guía práctica de 30 días para reconstruir tu mente, tus hábitos y tu energía.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --mauve:#7D5A6A;--mauve-dark:#5C3D49;--rose:#C4A0B0;
+  --blush:#EDD9E0;--blush-light:#F8F0F3;--cream:#FAF5F7;
+  --taupe:#9E8088;--dark:#3D2A31;--white:#ffffff;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--dark);max-width:480px;margin:0 auto;overflow-x:hidden;}
+/* HERO */
+.hero{background:var(--mauve-dark);padding:52px 24px 44px;text-align:center;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:-60px;right:-60px;width:200px;height:200px;border-radius:50%;background:rgba(196,160,176,0.15);}
+.hero::after{content:'';position:absolute;bottom:-40px;left:-40px;width:140px;height:140px;border-radius:50%;background:rgba(237,217,224,0.1);}
+.hero-eyebrow{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--rose);margin-bottom:18px;}
+.hero-title{font-family:'Cormorant Garamond',serif;font-size:40px;line-height:1.15;font-weight:600;color:var(--white);margin-bottom:18px;}
+.hero-title em{color:var(--blush);font-style:italic;}
+.hero-sub{font-size:14px;line-height:1.8;color:rgba(255,255,255,0.7);margin-bottom:32px;}
+.hero-sub strong{color:var(--blush);}
+.hero-mockup{background:rgba(255,255,255,0.08);border:1px solid rgba(196,160,176,0.3);border-radius:16px;padding:22px;margin:24px 0;display:flex;align-items:center;gap:16px;}
+.hero-mockup-icon{width:52px;height:52px;border-radius:12px;background:var(--mauve);display:flex;align-items:center;justify-content:center;font-size:26px;flex-shrink:0;}
+.hero-mockup-text{text-align:left;}
+.hero-mockup-text p{font-size:12px;color:rgba(255,255,255,0.5);margin-bottom:2px;}
+.hero-mockup-text strong{font-size:14px;color:var(--white);display:block;}
+/* BUTTONS */
+.btn-primary{display:block;width:100%;padding:18px;background:var(--blush);color:var(--mauve-dark);font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;border:none;border-radius:50px;cursor:pointer;text-decoration:none;text-align:center;transition:opacity 0.2s;}
+.btn-primary:hover{opacity:0.88;}
+.btn-ghost{display:block;width:100%;padding:15px;background:transparent;color:var(--blush);font-size:13px;font-weight:500;border:1px solid rgba(196,160,176,0.4);border-radius:50px;text-decoration:none;text-align:center;margin-top:10px;}
+/* SECTIONS */
+section{padding:48px 24px;}
+.section-label{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--rose);margin-bottom:10px;display:block;}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:30px;line-height:1.25;font-weight:600;color:var(--mauve-dark);margin-bottom:20px;}
+.section-title em{font-style:italic;color:var(--mauve);}
+.body-text{font-size:14px;line-height:1.8;color:var(--taupe);}
+/* PAIN */
+.pain{background:var(--cream);}
+.pain-item{background:var(--white);border:1px solid var(--blush);border-radius:14px;padding:16px 18px;margin-bottom:10px;display:flex;align-items:flex-start;gap:12px;}
+.pain-dot{width:7px;height:7px;border-radius:50%;background:var(--rose);flex-shrink:0;margin-top:6px;}
+.pain-item p{font-size:13px;line-height:1.65;color:var(--dark);}
+/* QUOTE */
+.quote-block{background:var(--mauve);padding:40px 28px;text-align:center;}
+.quote-text{font-family:'Cormorant Garamond',serif;font-size:23px;line-height:1.5;color:var(--white);font-style:italic;margin-bottom:14px;}
+.quote-attr{font-size:11px;letter-spacing:2px;color:var(--rose);text-transform:uppercase;}
+/* NO */
+.no-section{background:var(--blush-light);}
+.no-item{padding:15px 0;border-bottom:1px solid var(--blush);display:flex;align-items:center;gap:14px;}
+.no-item:last-child{border-bottom:none;}
+.no-x{width:26px;height:26px;border-radius:50%;background:var(--blush);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:11px;color:var(--mauve-dark);font-weight:700;}
+.no-item p{font-size:13px;color:var(--taupe);line-height:1.55;}
+.no-item p span{text-decoration:line-through;}
+/* WHAT */
+.what{background:var(--cream);}
+.product-card{background:var(--white);border:1px solid var(--blush);border-radius:20px;padding:30px;margin:24px 0;text-align:center;}
+.product-icon{font-size:44px;margin-bottom:14px;}
+.product-name{font-family:'Cormorant Garamond',serif;font-size:32px;color:var(--mauve-dark);font-weight:600;margin-bottom:6px;}
+.product-tagline{font-size:13px;color:var(--taupe);margin-bottom:18px;line-height:1.6;}
+.product-pills{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;}
+.pill{background:var(--blush);color:var(--mauve-dark);font-size:11px;padding:6px 14px;border-radius:50px;font-weight:600;}
+/* MODULES */
+.modules{background:var(--blush-light);}
+.module-item{background:var(--white);border-radius:16px;padding:18px 20px;margin-bottom:10px;display:flex;align-items:center;gap:14px;border:1px solid rgba(196,160,176,0.25);}
+.module-num{width:38px;height:38px;border-radius:10px;background:var(--mauve);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;flex-shrink:0;font-family:'Cormorant Garamond',serif;}
+.module-content strong{font-size:13px;color:var(--dark);display:block;margin-bottom:3px;}
+.module-content span{font-size:12px;color:var(--taupe);}
+/* LEARNS */
+.learns{background:var(--cream);}
+.learn-item{padding:14px 0;border-bottom:1px solid var(--blush);display:flex;gap:14px;align-items:flex-start;}
+.learn-item:last-child{border-bottom:none;}
+.learn-check{width:22px;height:22px;border-radius:50%;background:var(--mauve);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;font-size:11px;color:white;font-weight:700;}
+.learn-item p{font-size:13px;line-height:1.65;color:var(--dark);}
+/* BONUSES */
+.bonuses{background:var(--mauve-dark);padding:48px 24px;}
+.bonuses .section-label{color:var(--rose);}
+.bonuses .section-title{color:var(--white);}
+.bonus-card{background:rgba(255,255,255,0.07);border:1px solid rgba(196,160,176,0.2);border-radius:16px;padding:18px 20px;margin-bottom:10px;display:flex;gap:14px;align-items:flex-start;}
+.bonus-tag{background:var(--rose);color:var(--mauve-dark);font-size:10px;font-weight:700;letter-spacing:1px;padding:5px 9px;border-radius:6px;flex-shrink:0;margin-top:2px;text-transform:uppercase;white-space:nowrap;}
+.bonus-card strong{font-size:13px;color:var(--white);display:block;margin-bottom:5px;}
+.bonus-card p{font-size:12px;color:rgba(255,255,255,0.6);line-height:1.65;}
+/* TIMER */
+.timer-block{background:rgba(237,217,224,0.1);border:1px solid rgba(196,160,176,0.25);border-radius:16px;padding:22px;text-align:center;margin:24px 0;}
+.timer-label{font-size:11px;color:var(--rose);letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;}
+.timer-digits{display:flex;gap:10px;justify-content:center;align-items:flex-start;}
+.timer-unit{text-align:center;}
+.timer-num{font-family:'Cormorant Garamond',serif;font-size:40px;color:var(--white);font-weight:600;display:block;line-height:1;}
+.timer-sub{font-size:9px;color:var(--rose);letter-spacing:1px;text-transform:uppercase;margin-top:5px;display:block;}
+.timer-sep{font-size:32px;color:var(--rose);padding-top:4px;line-height:1;}
+/* TESTIMONIALS */
+.testimonials{background:var(--cream);}
+.testi-card{background:var(--white);border:1px solid var(--blush);border-radius:16px;padding:20px;margin-bottom:12px;}
+.testi-stars{color:var(--mauve);font-size:14px;margin-bottom:10px;letter-spacing:2px;}
+.testi-text{font-size:13px;line-height:1.75;color:var(--dark);font-style:italic;margin-bottom:14px;}
+.testi-name{font-size:11px;color:var(--taupe);letter-spacing:1px;text-transform:uppercase;font-weight:600;}
+/* FINAL CTA */
+.final-cta{background:var(--mauve);padding:52px 24px;text-align:center;}
+.final-cta .section-title{color:var(--white);}
+.final-cta .body-text{color:rgba(255,255,255,0.7);margin-bottom:30px;}
+.price-block{margin-bottom:28px;}
+.price-before{font-size:13px;color:rgba(255,255,255,0.4);text-decoration:line-through;margin-bottom:6px;}
+.price-main{font-family:'Cormorant Garamond',serif;font-size:58px;color:var(--white);font-weight:600;line-height:1;}
+.price-note{font-size:12px;color:var(--rose);margin-top:6px;}
+.final-cta .btn-primary{background:var(--white);color:var(--mauve-dark);}
+/* FAQ */
+.faq{background:var(--blush-light);}
+.faq-item{border-bottom:1px solid var(--blush);}
+.faq-btn{width:100%;background:none;border:none;cursor:pointer;padding:18px 0;display:flex;justify-content:space-between;align-items:center;text-align:left;}
+.faq-q-text{font-size:13px;font-weight:600;color:var(--mauve-dark);padding-right:12px;}
+.faq-icon{font-size:20px;color:var(--rose);font-weight:300;flex-shrink:0;transition:transform 0.25s;display:inline-block;}
+.faq-icon.open{transform:rotate(45deg);}
+.faq-a{font-size:13px;line-height:1.75;color:var(--taupe);padding-bottom:18px;display:none;}
+.faq-a.open{display:block;}
+/* FOOTER */
+footer{background:var(--mauve-dark);padding:32px 24px;text-align:center;}
+.footer-logo{font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--rose);margin-bottom:14px;letter-spacing:3px;display:block;}
+footer p{font-size:11px;color:rgba(255,255,255,0.4);line-height:1.9;}
+footer a{color:rgba(255,255,255,0.4);text-decoration:none;}
+/* STICKY */
+.sticky-cta{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:480px;background:var(--mauve-dark);padding:12px 20px 16px;border-top:1px solid rgba(196,160,176,0.2);z-index:999;opacity:0;pointer-events:none;transition:opacity 0.3s;}
+.sticky-cta.visible{opacity:1;pointer-events:all;}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <p class="hero-eyebrow">✦ GlowApp · Reset Real ✦</p>
+  <h1 class="hero-title">¿Y si en <em>30 días</em> pudieras volver a ser vos?</h1>
+  <p class="hero-sub">Una guía práctica para reconstruir tu <strong>mente, tus hábitos y tu energía</strong> — aunque hoy sientas que estás completamente desconectada de vos misma.</p>
+  <div class="hero-mockup">
+    <div class="hero-mockup-icon">✨</div>
+    <div class="hero-mockup-text">
+      <p>La guía digital completa</p>
+      <strong>GlowApp Reset Real</strong>
+    </div>
+  </div>
+  <a href="TU_LINK_DE_HOTMART_ACA" class="btn-primary">QUIERO MI RESET REAL</a>
+  <a href="#que-es" class="btn-ghost">Descubrí cómo funciona ↓</a>
+</section>
+
+<!-- PAIN -->
+<section class="pain">
+  <span class="section-label">¿Te suena familiar?</span>
+  <h2 class="section-title">¿Te preguntás por qué <em>no podés</em> arrancar?</h2>
+  <div class="pain-item"><div class="pain-dot"></div><p>¿Por qué seguís atrapada en los mismos hábitos que te drenan semana tras semana?</p></div>
+  <div class="pain-item"><div class="pain-dot"></div><p>¿Por qué tu mente está siempre agotada aunque sientas que "no hiciste nada"?</p></div>
+  <div class="pain-item"><div class="pain-dot"></div><p>¿Por qué empezás bien los lunes y abandonás antes del miércoles?</p></div>
+  <div class="pain-item"><div class="pain-dot"></div><p>¿Por qué sentís que todas están avanzando, menos vos?</p></div>
+  <div class="pain-item"><div class="pain-dot"></div><p>¿Cuál es el verdadero motivo por el que te saboteás cuando intentás cambiar?</p></div>
+  <p style="margin-top:20px;font-size:14px;line-height:1.7;color:var(--mauve-dark);font-weight:500;">Si algo de esto te resonó — te entiendo. Estuve exactamente ahí.</p>
+</section>
+
+<!-- QUOTE 1 -->
+<div class="quote-block">
+  <p class="quote-text">"No estás rota.<br>Estás desconectada de vos misma."</p>
+  <p class="quote-attr">— GlowApp Reset Real</p>
+</div>
+
+<!-- NO SECTION -->
+<section class="no-section">
+  <span class="section-label">La verdad que nadie te dice</span>
+  <h2 class="section-title">No vas a cambiar con <em>esto</em></h2>
+  <div class="no-item"><div class="no-x">✕</div><p><span>Frases bonitas en Instagram</span> que se sienten bien dos minutos</p></div>
+  <div class="no-item"><div class="no-x">✕</div><p><span>Planners que descargás</span> y guardás sin usar</p></div>
+  <div class="no-item"><div class="no-x">✕</div><p><span>Retos de 21 días</span> que abandonás a la semana</p></div>
+  <div class="no-item"><div class="no-x">✕</div><p><span>Motivación pura</span> — que desaparece cuando más la necesitás</p></div>
+  <div class="no-item"><div class="no-x">✕</div><p><span>Perfección</span> — que es miedo disfrazado de estándar alto</p></div>
+  <p style="margin-top:22px;font-size:14px;line-height:1.8;color:var(--dark);">Si no lograste cambiar tu vida, <strong>no es porque no podás.</strong><br>Es porque nadie te dio una estructura emocional y realista para hacerlo.</p>
+</section>
+
+<!-- QUÉ ES -->
+<section class="what" id="que-es">
+  <span class="section-label">El sistema GlowApp</span>
+  <h2 class="section-title">Una guía creada para <em>la mujer real</em></h2>
+  <div class="product-card">
+    <div class="product-icon">🌸</div>
+    <p class="product-name">Reset Real</p>
+    <p class="product-tagline">Autoestima · Autoconocimiento · Hábitos reales<br>Vínculos · Cuerpo · Energía femenina</p>
+    <div class="product-pills">
+      <span class="pill">30 días</span>
+      <span class="pill">12 capítulos</span>
+      <span class="pill">100% digital</span>
+      <span class="pill">Trackers incluidos</span>
+      <span class="pill">Plan diario</span>
+    </div>
+  </div>
+  <p class="body-text">No es un libro para leer y guardar en el cajón. Es una guía para <strong style="color:var(--dark);">trabajar</strong>. Con ejercicios, reflexiones y herramientas que funcionan incluso cuando no tenés ganas.</p>
+</section>
+
+<!-- MÓDULOS -->
+<section class="modules">
+  <span class="section-label">Lo que vas a trabajar</span>
+  <h2 class="section-title">12 capítulos que van <em>al hueso</em></h2>
+  <div class="module-item"><div class="module-num">01</div><div class="module-content"><strong>No estás rota — estás desconectada</strong><span>Tu punto de partida real, sin juicio</span></div></div>
+  <div class="module-item"><div class="module-num">02</div><div class="module-content"><strong>Autoestima real</strong><span>Cómo te hablás, cómo te ves, cómo te tratás</span></div></div>
+  <div class="module-item"><div class="module-num">03</div><div class="module-content"><strong>Autoconocimiento</strong><span>Volver a mirarte de verdad</span></div></div>
+  <div class="module-item"><div class="module-num">04</div><div class="module-content"><strong>Miedos y bloqueos</strong><span>Lo que te frena — y cómo soltarlo</span></div></div>
+  <div class="module-item"><div class="module-num">05</div><div class="module-content"><strong>Límites</strong><span>Dejar de regalar tu energía</span></div></div>
+  <div class="module-item"><div class="module-num">06</div><div class="module-content"><strong>Cuerpo e imagen</strong><span>Tu cuerpo como casa, no como enemigo</span></div></div>
+  <div class="module-item"><div class="module-num">07</div><div class="module-content"><strong>Hábitos reales</strong><span>Cómo dejar de empezar y abandonar</span></div></div>
+  <div class="module-item"><div class="module-num">08</div><div class="module-content"><strong>Alimentación y energía</strong><span>Sin obsesión ni culpa</span></div></div>
+  <div class="module-item"><div class="module-num">09</div><div class="module-content"><strong>Orden mental y financiero</strong><span>El desorden que no ves</span></div></div>
+  <div class="module-item"><div class="module-num">10</div><div class="module-content"><strong>Vínculos y comunicación</strong><span>Rodearte mejor y hablar más claro</span></div></div>
+  <div class="module-item"><div class="module-num">11</div><div class="module-content"><strong>Plan de acción mensual</strong><span>Tu mes de reset real, semana a semana</span></div></div>
+  <div class="module-item"><div class="module-num">12</div><div class="module-content"><strong>Trackers y recursos</strong><span>Herramientas para sostenerlo en el tiempo</span></div></div>
+</section>
+
+<!-- APRENDERÁS -->
+<section class="learns">
+  <span class="section-label">Lo que vas a lograr</span>
+  <h2 class="section-title">Esto es lo que <em>construís</em></h2>
+  <div class="learn-item"><div class="learn-check">✓</div><p>Entendés qué te pasa y por qué — sin juzgarte</p></div>
+  <div class="learn-item"><div class="learn-check">✓</div><p>Identificás qué te baja la autoestima y cómo trabajarlo</p></div>
+  <div class="learn-item"><div class="learn-check">✓</div><p>Explorás quién sos más allá de los roles que cumplís</p></div>
+  <div class="learn-item"><div class="learn-check">✓</div><p>Entendés tus miedos y dejás de sabotearte</p></div>
+  <div class="learn-item"><div class="learn-check">✓</div><p>Aprendés a poner límites sin culpa</p></div>
+  <div class="learn-item"><div class="learn-check">✓</div><p>Encontrás formas de cuidar tu cuerpo sin exigirte perfección</p></div>
+  <div class="learn-item"><div class="learn-check">✓</div><p>Tenés un sistema de hábitos que se puede sostener en el tiempo</p></div>
+  <div class="learn-item"><div class="learn-check">✓</div><p>Revisás tus vínculos y tu forma de comunicarte</p></div>
+  <div class="learn-item"><div class="learn-check">✓</div><p>Ordenás tu cabeza y tu economía sin drama</p></div>
+</section>
+
+<!-- CTA MEDIO -->
+<div style="background:var(--blush);padding:36px 24px;text-align:center;">
+  <p style="font-family:'Cormorant Garamond',serif;font-size:21px;color:var(--mauve-dark);margin-bottom:18px;font-style:italic;">"Tu cambio empieza ahora."</p>
+  <a href="TU_LINK_DE_HOTMART_ACA" class="btn-primary">QUIERO EMPEZAR MI RESET</a>
+</div>
+
+<!-- BONUSES -->
+<section class="bonuses">
+  <span class="section-label">Incluido en tu compra</span>
+  <h2 class="section-title">Y eso no es <em>todo</em></h2>
+  <div class="bonus-card"><span class="bonus-tag">01</span><div><strong>Plan de 30 días día a día</strong><p>Cada día tiene su capítulo, lección, acción concreta, afirmación y hábito mínimo. Sabés exactamente qué hacer cada mañana.</p></div></div>
+  <div class="bonus-card"><span class="bonus-tag">02</span><div><strong>Trackers imprimibles mensuales</strong><p>Hábitos diarios, tracker emocional semanal, finanzas con columna de emoción y energía/autocuidado. Imprimís y usás todos los meses.</p></div></div>
+  <div class="bonus-card"><span class="bonus-tag">03</span><div><strong>Biblioteca de recursos GlowApp</strong><p>Los libros que realmente cambian algo: Hábitos Atómicos, Los Dones de la Imperfección, Mujeres que Corren con los Lobos, El Poder del Ahora y más.</p></div></div>
+  <div class="bonus-card"><span class="bonus-tag">04</span><div><strong>Diario de reflexión mensual</strong><p>Ejercicio de cierre para integrar lo aprendido cada mes. El cambio real se construye revisándose.</p></div></div>
+  <div class="bonus-card"><span class="bonus-tag">05</span><div><strong>Comunidad GlowApp</strong><p>Un espacio para compartir tu proceso con mujeres que van en el mismo camino. Sin comparaciones, sin juicio.</p></div></div>
+  <div class="timer-block">
+    <p class="timer-label">Esta oferta vence en</p>
+    <div class="timer-digits">
+      <div class="timer-unit"><span class="timer-num" id="hours">00</span><span class="timer-sub">horas</span></div>
+      <div class="timer-sep">:</div>
+      <div class="timer-unit"><span class="timer-num" id="minutes">00</span><span class="timer-sub">min</span></div>
+      <div class="timer-sep">:</div>
+      <div class="timer-unit"><span class="timer-num" id="seconds">00</span><span class="timer-sub">seg</span></div>
+    </div>
+  </div>
+  <a href="TU_LINK_DE_HOTMART_ACA" class="btn-primary" style="background:var(--blush);color:var(--mauve-dark);">QUIERO MI RESET REAL</a>
+</section>
+
+<!-- QUOTE 2 -->
+<div class="quote-block">
+  <p class="quote-text">"Lo mínimo sostenido vale más que lo perfecto abandonado."</p>
+  <p class="quote-attr">— Sistema GlowApp</p>
+</div>
+
+<!-- TESTIMONIOS -->
+<section class="testimonials">
+  <span class="section-label">Ellas ya lo vivieron</span>
+  <h2 class="section-title">Lo que dicen las <em>chicas</em> de Reset Real</h2>
+  <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">"Siempre empezaba cosas y las dejaba. Con esta guía entendí por qué. No era falta de voluntad — era que no me conocía. El capítulo de miedos me rompió la cabeza."</p><p class="testi-name">— Valentina R., 28 años · Buenos Aires</p></div>
+  <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">"Los trackers de finanzas me hicieron dar cuenta de cuánto gastaba por ansiedad. Solo verlo escrito ya fue un cambio enorme."</p><p class="testi-name">— Camila F., 31 años · Rosario</p></div>
+  <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">"Me di cuenta de que nunca le hablaría a nadie como me hablo a mí misma. El quiz de autoestima fue un antes y un después."</p><p class="testi-name">— Sofía M., 25 años · Córdoba</p></div>
+  <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">"El plan de 30 días es increíble. Cada día es manejable. Después de 2 semanas ya me sentía diferente."</p><p class="testi-name">— Lucía P., 33 años · Mendoza</p></div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta" id="comprar">
+  <span class="section-label" style="color:var(--rose);">No esperes el próximo lunes</span>
+  <h2 class="section-title">Estás a un clic de empezar <em>a elegirte</em></h2>
+  <p class="body-text">Guía completa de 12 capítulos + Plan de 30 días + Trackers imprimibles + Comunidad. Todo digital. Acceso inmediato.</p>
+  <div class="price-block">
+    <p class="price-before">Precio regular: $19.990</p>
+    <p class="price-main">$9.990</p>
+    <p class="price-note">Oferta de lanzamiento · Precio en ARS</p>
+  </div>
+  <a href="TU_LINK_DE_HOTMART_ACA" class="btn-primary">COMENZAR MI RESET AHORA</a>
+  <p style="font-size:11px;color:rgba(255,255,255,0.4);margin-top:14px;line-height:1.7;">Pago seguro · Acceso inmediato · Tuyo para siempre</p>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <span class="section-label">Tus preguntas</span>
+  <h2 class="section-title">Todo lo que <em>necesitás</em> saber</h2>
+  <div class="faq-item">
+    <button class="faq-btn" onclick="toggleFaq(this)"><span class="faq-q-text">¿Cómo recibo la guía?</span><span class="faq-icon">+</span></button>
+    <p class="faq-a">Al completar la compra recibís acceso inmediato por email. Podés leerla desde el celular, tablet o computadora en cualquier momento.</p>
+  </div>
+  <div class="faq-item">
+    <button class="faq-btn" onclick="toggleFaq(this)"><span class="faq-q-text">¿Por cuánto tiempo tengo acceso?</span><span class="faq-icon">+</span></button>
+    <p class="faq-a">Para siempre. Una vez que comprás, es tuya. Podés volver cada vez que necesites reorientarte.</p>
+  </div>
+  <div class="faq-item">
+    <button class="faq-btn" onclick="toggleFaq(this)"><span class="faq-q-text">¿Necesito mucho tiempo libre?</span><span class="faq-icon">+</span></button>
+    <p class="faq-a">No. Está diseñada para la vida real. Cada día tiene una acción pequeña y manejable. No hay forma de hacerlo mal.</p>
+  </div>
+  <div class="faq-item">
+    <button class="faq-btn" onclick="toggleFaq(this)"><span class="faq-q-text">¿Los trackers son imprimibles?</span><span class="faq-icon">+</span></button>
+    <p class="faq-a">Sí. Son PDFs en formato A4, diseñados para imprimir y reutilizar todos los meses. Hábitos, emociones, finanzas y energía.</p>
+  </div>
+  <div class="faq-item">
+    <button class="faq-btn" onclick="toggleFaq(this)"><span class="faq-q-text">¿Qué pasa si me rindo a mitad?</span><span class="faq-icon">+</span></button>
+    <p class="faq-a">La guía está diseñada exactamente para eso. Si fallás un día, volvés. La regla GlowApp: nunca dos días seguidos sin el hábito.</p>
+  </div>
+  <div class="faq-item">
+    <button class="faq-btn" onclick="toggleFaq(this)"><span class="faq-q-text">¿Es seguro el pago?</span><span class="faq-icon">+</span></button>
+    <p class="faq-a">Sí. El pago se procesa a través de Hotmart, la plataforma de educación digital más grande de Latinoamérica.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-logo">GlowApp</span>
+  <p>Reset Real · Guía para volver a vos<br>Todos los derechos reservados © 2025<br><a href="mailto:contacto@glowapp.ar">contacto@glowapp.ar</a></p>
+  <p style="margin-top:14px;font-size:10px;">Los resultados varían según la constancia y aplicación de cada persona. Esta guía no reemplaza atención psicológica profesional.</p>
+</footer>
+
+<!-- STICKY -->
+<div class="sticky-cta" id="sticky">
+  <a href="TU_LINK_DE_HOTMART_ACA" class="btn-primary" style="padding:15px;font-size:12px;">COMENZAR MI RESET — $9.990 →</a>
+</div>
+
+<script>
+(function(){
+  var end=Date.now()+4*3600*1000+23*60*1000+47*1000;
+  function pad(n){return n<10?'0'+n:''+n;}
+  function tick(){
+    var d=Math.max(0,end-Date.now());
+    document.getElementById('hours').textContent=pad(Math.floor(d/3600000));
+    document.getElementById('minutes').textContent=pad(Math.floor((d%3600000)/60000));
+    document.getElementById('seconds').textContent=pad(Math.floor((d%60000)/1000));
+  }
+  tick();setInterval(tick,1000);
+})();
+window.addEventListener('scroll',function(){
+  var el=document.getElementById('sticky');
+  if(window.scrollY>500){el.classList.add('visible');}else{el.classList.remove('visible');}
+});
+function toggleFaq(btn){
+  var icon=btn.querySelector('.faq-icon');
+  var answer=btn.nextElementSibling;
+  var isOpen=answer.classList.contains('open');
+  document.querySelectorAll('.faq-a').forEach(function(a){a.classList.remove('open');});
+  document.querySelectorAll('.faq-icon').forEach(function(i){i.classList.remove('open');});
+  if(!isOpen){answer.classList.add('open');icon.classList.add('open');}
+}
+</script>
+</body>
+</html>
